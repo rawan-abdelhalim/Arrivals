@@ -42,7 +42,7 @@ class InternDelete(DeleteView):
 
 class LateCreate(CreateView):
     model = Late
-    fields = ['name', 'payment']
+    fields = ['name']
     template_name = 'main/late_form.html'
 
     # """ prevents the form from saving before setting

@@ -1,6 +1,7 @@
 <h1> Interns </h1>
 {% for intern in object_list %}
 	<li><a href="{% url "main:intern_detail" intern.id %}">{{ intern }}</a> <a href= "{% url "main:intern_delete" intern.id %}"> Delete </a></li>
+	Next Payment: {{ intern.get_payment }}
 {% endfor %}
 
 <form action="{% url "main:intern_form"  %}" method="post">{% csrf_token %}
