@@ -1,0 +1,10 @@
+{{ object }}
+ {% for late in view.arrivals %}
+    <li><a href="{% url "main:late_detail" late.id %}">{{ late }} </a></li>
+  {% endfor %}
+
+  <form action="{% url "main:intern_list"  %}" method="get">{% csrf_token %}
+   <br> <button> Back </button>
+</form>
+
+<a href="{% url "main:late_form"  %}"> Record arrival </a>
